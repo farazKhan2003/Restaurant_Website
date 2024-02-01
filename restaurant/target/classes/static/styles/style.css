@@ -1,0 +1,180 @@
+body {
+	margin: 0px;
+	font-family: Monaco, Monospace;
+	background: #EEE8FF;
+}
+
+h1 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 15px;
+	padding-left: 20px;
+	padding-bottom: 15px;
+	text-align: left;
+	background: #2B2177;
+	color: white;
+	font-size: 40px;
+	font-family: Verdana;
+}
+
+p.error-message {
+	color: red;
+	font-size: 15px;
+}
+
+a.login-button {
+	display: block;
+	background: #EEE8FF;
+	outline: 1px solid #7E787F;
+	color: black;
+	border-radius: 2.5%;
+	text-decoration: none;
+	float: right;
+	margin-top: 10px;
+	margin-right: 120px;
+	font-size: 15px;
+	font-weight: normal;
+	padding: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+a.create-folder-button {
+	display: block;
+	background: #EEE8FF;
+	outline: 1px solid #7E787F;
+	color: black;
+	border-radius: 2.5%;
+	text-decoration: none;
+	margin-top: 10px;
+	float:left;
+	font-size: 20px;
+	font-weight: normal;
+	padding: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+
+}	
+a.create-folder-button:hover {
+	background: #DED8DF;
+}
+.folder-label{
+	padding-top:8px;
+}
+a.login-button:hover {
+	background: #DED8DF;
+}
+
+.container {
+	display: table;
+	content: "";
+	clear: both;
+}
+.navigation {
+	background-color: #909090;
+	text-align: left;
+	padding-left: 20px;
+	font-size: 30px;
+	margin-top: 0px;
+}
+
+.navigation a {
+	background-color: #8f8f8f;
+	color: #bfb7d4;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.navigation a:hover {
+	background-color: #e5dbff;
+	padding: 5px;
+}
+
+.displayblock {
+	font-size: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+input:hover {
+	background-color: #e5dbff
+}
+
+#hLogo {
+	width: 290px;
+	height: 70px;
+	float: center-right;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.searchblock {
+    display:block;
+    font-size:20px;
+    margin-left:650px;
+}
+td,
+th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px;
+}
+
+td {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #eee;
+}
+
+th[scope="col"] {
+    background-color: #696969;
+    color: #fff;
+}
+
+th[scope="row"] {
+    background-color: #d7d9f2;
+}
+
+.file-header{
+    margin-left:300px;
+
+}
+.single-upload{
+    margin-left:380px;
+
+}
+.buttonF{
+    background-color:#1B154A;
+    color:white;
+    padding: 14px 28px;
+}
+.buttonF:hover {
+     background-color:#15CBCB;
+      color: black;
+}
+.viewButton{
+    background-color:#1B154A;
+    color:white;
+    padding: 14px 28px;
+    margin-top:18px;
+}
+.viewButton:hover{
+    background-color:#15CBCB;
+      color: white;
+}
+input[type=file]::file-selector-button {
+    background-color:#1B154A;
+    color:white;
+    padding: 14px 28px;
+    margin-top: 14px;
+}
+
+input[type=file]::file-selector-button:hover {
+    background-color:#15CBCB;
+      color: black;
+}
+.folderButtons{
+    margin-left:380px;
+}

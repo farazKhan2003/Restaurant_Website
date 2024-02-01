@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Current Orders</title>
+    <link rel="stylesheet" th:href="@{/styles/ordering-menu.css}" type="text/css">
+    </link>
+    <script src="/webjars/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="/webjars/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <style>
+    body {
+      background-image: url("images/HomePageImage.jpg");
+    }
+
+    </style>
+</head>
+
+<body>
+<!-- The header -->
+<header>
+    <a class="logo" href="#">Oaxaca</a>
+    <nav class="navbar">
+        <a href="home">Home</a>
+        <a href="orderingmenu">Dishes</a>
+        <a href="contactus">Contact us</a>
+        <a href="basket">Basket/Orders</a>
+        <a href="deliveredOrder">Delivered Orders</a>
+        <div class="navbar-right">
+            <a href="login" th:if="${session.user}==null">Login</a>
+            <span th:if="${session.user}!=null">
+          <a href="help">Help</a>
+          <div class="logoutb">
+            <button class="logoutdrop" th:text="${session.user.getUsername}"></button>
+            <div class="dropcontent">
+              <form th:action="@{/logout}" th:method="post">
+                <button class="logout" type="submit">Logout</button>
+              </form>
+            </div>
+          </div>
+        </span>
+        </div>
+    </nav>
+</header>
+
+<section class="helpblock">
+    <h2>Contact Us</h2>
+    <ul>
+        <li>
+            <p>Email-Address: Oaxaca@hotmail.com</p>
+            <p>Phone Number: +44 720785018</p>
+            <p>Address: 32 Chiliton Street, Westminster, UK</p>
+        </li>
+    </ul>
+</section>
+</body>
+
+</html>

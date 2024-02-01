@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" th:href="@{/styles/menuStyle.css}" type="text/css"></link>
+    <script src="/webjars/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="/webjars/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+<body>
+<h1><img id="hLogo" th:src="@{/images/home-logo.png}">
+</h1>
+<form method="get" th:action="@{/searchItems}">
+    <label>Search:</label>
+    <input name="keyword" placeholder="food item name" required type="searchItems"/>
+    &nbsp;
+    <input type="submit" value="Search"/>
+</form>
+<table>
+    <thead>
+    <th scope="row" th:if="${MenuItems!=null}">Delete item</th>
+    <th scope="row" th:if="${MenuItems!=null}">Item name</th>
+    <th scope="row" th:if="${MenuItems!=null}">Item description</th>
+    <th scope="row" th:if="${MenuItems!=null}">Item price</th>
+    <th scope="row" th:if="${MenuItems!=null}">Item stock amount</th>
+    </thead>
+    <tbody>
+    <tr th:each="menuItem: ${MenuItems}">
+        <td>
+            <form method="get" th:action="@{/removeItems}">
+                <input name="itemID" th:value="${menuItem.itemID}" type="hidden"/>
+                <button type="submit">Delete this item</button>
+            </form>
+        </td>
+        <td th:text="${menuItem.itemID}"></td>
+        <td th:text="${menuItem.itemName}"></td>
+        <td th:text="${menuItem.description}"></td>
+        <td th:text="${menuItem.price}"></td>
+        <td th:text="${menuItem.stockAmount}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

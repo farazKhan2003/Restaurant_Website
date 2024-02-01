@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" th:href="@{/styles/ordering-menu.css}" type="text/css">
+    </link>
+    <script src="/webjars/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="/webjars/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <style>
+    body {
+      background-image: url("images/menuChangeImg.jpg");
+    }
+
+
+    </style>
+</head>
+
+<body>
+<!-- The header -->
+<header>
+    <a class="logo" href="#">Oaxaca</a>
+    <nav class="navbar">
+        <a href="waiterhome">Home</a>
+        <a th:href="menuChange">Change Menu</a>
+        <a href="waiterOrder">Keep Track of Orders</a>
+        <a th:href="waiterhelps">Help</a>
+        <div class="navbar-right">
+            <div class="logoutb">
+                <button class="logoutdrop" th:text="${session.user.getUsername}"></button>
+                <div class="dropcontent">
+                    <form th:action="@{/logout}" th:method="post">
+                        <button class="logout" type="submit">Logout</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="changeMenuOptions">
+    <label style="color:#16FF00">Successfully Changed Menu</label>
+    <form method="get" th:action="@{/addItem}">
+        <button type="submit">Add Dish</button>
+        <br>
+        <label>Asks for dish information and adds it onto the menu</label>
+    </form>
+    <br>
+    <form method="post" th:action="@{/editRemoveMenu}">
+        <button type="submit">Remove or Edit Dish</button>
+        <br>
+        <label>Asks for which dish to remove or edit and then allows you to add changes to the menu</label>
+    </form>
+    <br>
+    <form method="post" th:action="@{/viewMenu}">
+        <button type="submit">View Menu</button>
+        <br>
+        <label>Gives you a spectate view of what the menu looks like</label>
+    </form>
+</div>
+</html>

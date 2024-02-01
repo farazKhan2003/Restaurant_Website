@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+.tables {
+    width: 50%;
+    float: left;
+    border: 20px solid transparent;
+}
+
+.ordersTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 75px;
+}
+
+.ordersTable td, .ordersTable th {
+    padding: 12px 15x;
+    border: 1px; solid: #ddd;
+    text-align: center;
+}
+
+.ordersTable th {
+    background-color: orangered;
+    color: white;
+}
+
+.Dtable td {
+    color: red;
+}
+
+.refresh {
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+}
+
+.refresh img {
+    max-width: 30px;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+/*Set background color for odd rows*/
+table tr:nth-child(odd){
+    background: rgb(150,150,150);
+}
+
+/*Set background color for odd rows*/
+table tr:nth-child(even){
+    background: rgb(180,180,180);
+}
+/*Set the mouse to highlight when focused on a row*/
+table tr:hover{
+    background-color: rgb(120,120,120);
+}

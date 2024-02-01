@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"project.restaurant"},{"l":"project.restaurant.controllers"},{"l":"project.restaurant.models"},{"l":"project.restaurant.repository"}];updateSearchResults();
