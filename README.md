@@ -87,6 +87,7 @@ the waiter to promptly assist the customer.
 4. Run the SQL file which is in the repository to set up the database. This is done in MySQL Workbench.
 5. In the IDE, run the "RestaurantApplication" file. 
 6. Access the site on "localhost:8080/home".
+7. In the url put http://localhost:8080/insert and click insert, this will add the admin waiter and admin chef class.
 
 Here is a setup video for further clarity:
 https://www.youtube.com/watch?v=G48L8MUZLP4
